@@ -36,60 +36,50 @@ CPOLY is implemented in the Roots(...) procedure of the JT_CPoly class, while RP
                     System.Console.WriteLine("Solving third degree polynomial 'x^3-55x^2+1320x-18150'");  
                     
                     // Set polynomial coeficients (real part)
-            _P[1]  =  1;  
-            _P[2]  =  -55;  
-            _P[3]  =  1320;  
-            _P[4]  =  -18150;  
+                    _P[1]  =  1;  
+                    _P[2]  =  -55;  
+                    _P[3]  =  1320;  
+                    _P[4]  =  -18150;  
             
-            // test with imaginary coeficient values equal to zero
-            for  (int  I  =  1;  I  <  size;  I++) 
-            {  
-                _PI[I]  =  0.0;  
-            }  
+                    // test with imaginary coeficient values equal to zero
+                    for  (int  I  =  1;  I  <  size;  I++) 
+                    {  
+                        _PI[I]  =  0.0;  
+                    }  
   
-            // compute roots
-            cpoly.Roots(_P,  _PI,  10,  out  _ZR,  out  _ZI,  out  _FAIL);
+                    // compute roots
+                    cpoly.Roots(_P,  _PI,  degree,  out  _ZR,  out  _ZI,  out  _FAIL);
 
-            if  (_FAIL)  
-            {  
-                System.Console.WriteLine(msgFail);  
-            }
-            else
-            {   
-                System.Console.WriteLine("Roots:");
+                    if  (_FAIL)  
+                    {  
+                        System.Console.WriteLine(msgFail);  
+                    }
+                    else
+                    {   
+                        System.Console.WriteLine("Roots:");
                         // print results
-                for (int I = 1; I < size; I++)
-                {
-                    System.Console.WriteLine("{0} + ({1})i", _ZR[I], _ZI[I])
-                }
-            }           
+                        for (int I = 1; I < size; I++)
+                        {
+                            System.Console.WriteLine("{0} + ({1})i", _ZR[I], _ZI[I])
+                        }
+                    }           
             
-            System.Console.WriteLine();
-            System.Console.WriteLine("Press <Enter> to exit..."); 
-            System.Console.ReadLine();
-            }
+                    System.Console.WriteLine();
+                    System.Console.WriteLine("Press <Enter> to exit..."); 
+                    System.Console.ReadLine();
+                }
             }
         }
     }
   
-  
-
-
-
-
-  
-  
-  
-  
+    
 **Author JTPolyroots:**  
 <i>Copyright (c) 2021 Tiago C. Teixeira</i>  
   
-**Algorithm copyright**
-Copyright (c) [Michael A. Jenkins](https://research.cs.queensu.ca/home/maj/)
-Copyright (c) [Joseph F. Traub](http://dli.library.cmu.edu/traub/)
+**Algorithm copyright:**
+<i>Copyright (c) [Michael A. Jenkins](https://research.cs.queensu.ca/home/maj/)</i>
 
-  
-  
+<i>Copyright (c) [Joseph F. Traub](http://dli.library.cmu.edu/traub/)</i>
 
 ## Accuracy  
   
@@ -99,7 +89,7 @@ However, there are polynomials which can cause loss of precision as illustrated 
   
 ## Copyright and Citation from original Fortran library  
 
-Copyright © 2021 [Association for Computing Machinery, Inc.](https://www.acm.org/)  
+<i>Copyright © 2021 [Association for Computing Machinery, Inc.](https://www.acm.org/)  </i>
 
 Permission to include in application software or to make digital or hard copies of part  
 or all of this work is subject to the following licensing agreement:
