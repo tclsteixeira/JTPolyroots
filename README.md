@@ -76,8 +76,8 @@ CPOLY is implemented in the Roots(...) procedure of the JT_CPoly class, while RP
 **Author JTPolyroots:**  
 <i>Copyright (c) 2021 Tiago C. Teixeira</i>  
   
-**Algorithm copyright:**
-<i>Copyright (c) [Michael A. Jenkins](https://research.cs.queensu.ca/home/maj/)</i>
+**Algorithm copyright:**  
+<i>Copyright (c) [Michael A. Jenkins](https://research.cs.queensu.ca/home/maj/)</i>  
 <i>Copyright (c) [Joseph F. Traub](http://dli.library.cmu.edu/traub/)</i>
 
 ## Accuracy  
