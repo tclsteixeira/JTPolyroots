@@ -10,7 +10,7 @@ CPOLY is implemented in the Roots(...) procedure of the JT_CPoly class, while RP
 
 ### Usage example
 
-    using system;
+    using System;
     using JTPolyroots;
     
     namespace Test
@@ -29,8 +29,8 @@ CPOLY is implemented in the Roots(...) procedure of the JT_CPoly class, while RP
                     int size = degree + 2; // Note: first index start at 1
                     double[]  _P  =  new  double[size];  // coeficients real part
                     double[]  _PI  =  new  double[size];  // coeficients imaginary part
-                    double[]  _ZR  =  new  double[size];  // roots real part
-                    double[]  _ZI  =  new  double[size];  // roots imaginary part
+                    double[]  _ZR  =  new  double[size-1];  // roots real part
+                    double[]  _ZI  =  new  double[size-1];  // roots imaginary part
                     bool  _FAIL  =  false;  
                     string  msgFail = "CPoly has failed on this example";  
                     System.Console.WriteLine("Solving third degree polynomial 'x^3-55x^2+1320x-18150'");  
@@ -58,15 +58,19 @@ CPOLY is implemented in the Roots(...) procedure of the JT_CPoly class, while RP
                     {   
                         System.Console.WriteLine("Roots:");
                         // print results
-                        for (int I = 1; I < size; I++)
+                        for (int I = 1; I <= degree; I++)
                         {
-                            System.Console.WriteLine("{0} + ({1})i", _ZR[I], _ZI[I])
+                            System.Console.WriteLine("{0} + ({1})i", _ZR[I], _ZI[I]);
                         }
                     }           
             
                     System.Console.WriteLine();
                     System.Console.WriteLine("Press <Enter> to exit..."); 
                     System.Console.ReadLine();
+                }  
+                catch(Exception e)
+                {
+                    System.Console.WriteLine(e.Message);
                 }
             }
         }
